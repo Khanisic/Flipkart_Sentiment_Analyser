@@ -1,0 +1,62 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flipkart senti</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="know">
+    <div class="kyfr-text-outer">
+        <p class="kyf-text">Know <br>Your <br>Flipkart<br>Reviews</p>
+    </div>
+    <div class="about-outer">
+        <p class="about-heading">About</p>
+        <p class="about-subheading">Sentiment Analysis</p>
+        <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequa <br>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequa</p>
+    </div>
+</div>
+
+<div class="syp-outer">
+    <h3>Select your product</h3>
+    <div class="syp-inner">
+        <a class="anchor" href="/gadgets">
+            <div  class="syp-box">
+                <p class="syp-box-title">Gadgets</p>
+                <img class="syp-img" src="{% static 'Icons/camera.png' %}" alt="syp-img">
+                <p class="syp-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequa</p>
+            </div>
+        </a>
+
+        <a class="anchor" href="/clothing">
+            <div class="syp-box">
+                <p class="syp-box-title">Clothing</p>
+                <img class="syp-img" src="{% static 'Icons/umbrella.png' %}" alt="syp-img">
+                <p class="syp-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequa</p>
+        </div>
+        </a>
+
+        <a class="anchor" href="/other">
+          <div class="syp-box">
+                <p class="syp-box-title">Other</p>
+                <img class="syp-img" src="{% static 'Icons/adidas.png' %}" alt="syp-img">
+                <p class="syp-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequa</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<img class="bg-image"  src="{% static 'Images/main.png' %}" alt="main-img">
+
+</body>
+</html>

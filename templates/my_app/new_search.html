@@ -1,0 +1,91 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flipkart senti</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="hiw">
+    <h3>How it works</h3>
+    <div class="hiw-inner">
+        <div class="hiw-box">
+            <p>1.</p>
+            <p>Scraping the Web</p>
+            <p>Flipkart</p>
+            <img alt="hiw-img">
+            <p></p>
+        </div>
+        <div class="hiw-box">
+            <p>2.</p>
+            <p>Extracting the review</p>
+            <p>Beautiful Soap</p>
+            <img alt="hiw-img">
+            <p></p>
+        </div>
+        <div class="hiw-box">
+            <p>3.</p>
+            <p>Analysing the reviews</p>
+            <p>NLTK Algorithm</p>
+            <img alt="hiw-img">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+<div class="products-outer">
+    <h2 style="text-align: center">{{ search | title }}</h2>
+
+    <div class="products-inner">
+
+        {% for post,scores in final_postings %}
+                    <div class="product-outer">
+                        <img alt="Flipkart Icon">
+
+                        <img src={{ post.1 }}>
+
+                        <a href={{ post.2 }}>{{ post.0 }}</a>
+
+                        <div class="products-pr-outer">
+                            <div class="price">
+                                <div class="price-currency">
+
+                                </div>
+                                <div class="price-right">
+                                    <p>{{ post.4 }}</p>
+                                    <p>{{ post.5 }}</p>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <div class="ratings-inner">
+                                    <p>Ratings: </p>
+                                    <div class="ratings-box">
+                                        <img alt="star">
+                                        <p>{{ post.3 }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{scores}} % positive reviews</p>
+                        <p>(1,645)</p>
+
+                        <div class="goto-outer">
+                            <a class="goto-text">Go to Page</a>
+                        </div>
+
+                    </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<img class="bg-image"  src="{% static 'Images/searchpage.png' %} " alt="main-img">
+
+</body>
+</html>

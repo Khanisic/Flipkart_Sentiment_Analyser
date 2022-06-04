@@ -1,0 +1,399 @@
+
+body{
+margin : 0;
+background-attachment: fixed;
+}
+*{
+font-family: 'Radio Canada', sans-serif;
+}
+p{
+margin: 0;
+}
+.anchor{
+text-decoration : none;
+}
+.bg-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+.know{
+    display: flex;
+    flex-direction: row;
+}
+.kyfr-text-outer{
+    width: 30%;
+    padding: 4rem 6rem 0 6rem;
+}
+.kyf-text{
+    color: white;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 0;
+}
+.about-outer{
+    margin: 2rem;
+    background: linear-gradient(180deg, #06344C 0%, rgba(6, 52, 76, 0) 100%);
+    border-radius: 16px;
+    width: 600px;
+    height: fit-content;
+    color: white;
+    text-align: center;
+    padding: 2rem 4rem;
+    align-self: center;
+}
+.about-heading{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+.about-subheading{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+.about-text{
+margin-top: 10px;
+    font-weight: 100;
+    font-size: 14px;
+}
+.syp-outer{
+}
+h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: white;
+    margin: 2rem 0;
+}
+h2{
+color: white;
+}
+.syp-inner{
+     display: flex;
+    gap: 6rem;
+    padding: 0px 6rem;
+    justify-content: center;
+}
+.syp-box{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    padding: 25px 0px;
+}
+
+.syp-box-title{
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+margin-bottom: 10px;
+}
+.syp-img{
+    position: absolute;
+    width: 67px;
+    left: 30px;
+    top: 30px;
+}
+.syp-box-content{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 40px 20px 40px;
+}
+.syp-box:hover {
+    background: white;
+    bottom: 20px;
+    transition: 500ms;
+}
+.syp-box:hover .syp-box-title {
+    color: black;
+    font-weight: 600;
+}
+.syp-box:hover .syp-box-content {
+    color: black;
+    font-weight: 600;
+}
+.hiw{
+}
+.hiw-inner{
+     display: flex;
+    gap: 6rem;
+    padding: 0px 6rem;
+    justify-content: center;
+}
+.hiw-box{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    position: relative;
+    padding: 1px 0px;
+}
+.hiw-box-index{
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+    margin: 0;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.hiw-box-title{
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+.hiw-box-subtitle{
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.hiw-box-img{
+    position: absolute;
+    width: 67px;
+    left: 30px;
+    top: 30px;
+    opacity: 0.5;
+}
+.hiw-box-content{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 40px 20px 40px;
+        margin: 0;
+}
+.hiw-box:hover {
+    background: white;
+}
+.hiw-box:hover .hiw-box-title {
+    color: black;
+    font-weight: 600;
+}
+.hiw-box:hover .hiw-box-img {
+    opacity: 0.5;
+}
+
+.hiw-box:hover .hiw-box-index {
+    color: black;
+    font-weight: 600;
+}
+.hiw-box:hover .hiw-box-subtitle {
+    color: black;
+    font-weight: 600;
+}
+.hiw-box:hover .hiw-box-content {
+    color: black;
+    font-weight: 600;
+}
+.search-outer{
+display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+.search-outer form{
+}
+
+.search-outer form input{
+    background: none;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #1D5C65;
+    width: 400px;
+    color: white;
+}
+.search-button{
+    color: #1D5C65;
+    font-weight: 600;
+    border: 1px solid #1D5C65;
+    text-align: center;
+    width: 100px;
+    padding: 8px 0;
+    border-radius: 20px;
+    position: relative;
+    left: 25px;
+    cursor: pointer;
+}
+.products-outer{
+    margin: 0 0 4rem 0;
+}
+.products-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 25px;
+}
+.product-outer{
+display: inline-grid;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    padding: 30px;
+}
+.flipkart{
+    align-self: center;
+    justify-self: center;
+    margin: 0rem 1rem 1rem 1rem;
+}
+.product-img{
+width: 150px;
+    justify-self: center;
+    height: 200px;
+}
+.product-title{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 1rem;
+    width: 180px;
+}
+.products-pr-outer{
+    display: flex;
+    justify-content: space-between;
+        margin-bottom: 25px;
+}
+.price{
+    width: 50%;
+    display: flex;
+}
+.price-currency{
+}
+.price-right{
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2px;
+}
+.price-right-price{
+    text-align: left;
+    position: relative;
+    left: 2px;
+}
+.price-right-orders{
+}
+.ratings{
+    display: flex;
+}
+.ratings-inner{
+}
+.rupee{
+}
+.ratings-box{
+background: linear-gradient(180deg, #03030F 0%, #216069 100%);
+    border-radius: 5px;
+    width: 80px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    gap: 8px;
+}
+.star{
+width: 18px;
+height: 18px;
+}
+.rating-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #A7A9A9;
+}
+.ratings-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.sentiment-score-text{
+font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 17px;
+    margin-bottom: 1rem;
+}
+
+.scores{
+    display: flex;
+    justify-content: space-around;
+}
+
+.score-inner{
+}
+
+.scores-text{
+font-weight: 900;
+}
+
+.scores-text p{
+    font-weight: 600;
+}
+
+.pos-span{
+    background: linear-gradient(152deg, #05FF00 0%, #267B91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.neu-span{
+    background: linear-gradient(152deg, #0094FF 36.03%, #000000 105.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.neg-span{
+    background: linear-gradient(152deg, #FF0000 0%, #27889B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.goto-outer{
+    border-radius: 20px;
+    width: 117px;
+    padding: 2px 3px;
+    justify-self: center;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    border: 2px solid #1D5C65;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    font-size: 14px;
+}
+.goto-text{
+text-decoration: none;
+    font-weight: 600;
+    color: #1C5B64;
+}
+

@@ -1,0 +1,100 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flipkart senti</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="hiw">
+    <h3>How it works</h3>
+    <div class="hiw-inner">
+        <div class="hiw-box">
+            <p class="hiw-box-index">1.</p>
+            <p class="hiw-box-title">Scraping the Web</p>
+            <p class="hiw-box-subtitle">Flipkart</p>
+            <img src="{% static 'Icons/code-slash.png' %}" class="hiw-box-img" alt="hiw-img">
+            <p class="hiw-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequs</p>
+        </div>
+        <div class="hiw-box">
+            <p class="hiw-box-index">2.</p>
+            <p class="hiw-box-title">Extracting the review</p>
+            <p class="hiw-box-subtitle">Beautiful Soap</p>
+            <img src="{% static 'Icons/options.png' %}" class="hiw-box-img" alt="hiw-img">
+            <p class="hiw-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequs</p>
+        </div>
+        <div class="hiw-box">
+            <p class="hiw-box-index">3.</p>
+            <p class="hiw-box-title">Analysing the reviews</p>
+            <p class="hiw-box-subtitle">NLTK Algorithm</p>
+            <img src="{% static 'Icons/copy.png' %}" class="hiw-box-img" alt="hiw-img">
+            <p class="hiw-box-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque ante augue, sed facilisis justo malesuada quis. Nullam in risus ex. Nullam et lacus at sapien vulputate interdum sed vel ante. Fusce mattis est sit amet dui pulvinar porttitor. Aliquam ac magna non turpis consequs</p>
+        </div>
+    </div>
+</div>
+
+<div class="search-outer">
+    <form  action="{% url 'other' %}" method="post">
+ {% csrf_token %}
+        <input type="text" name="search" placeholder="Search">
+        <button class="search-button" type="submit" name="action">Submit
+        </button>
+    </form>
+</div>
+
+<div class="products-outer">
+    <h2 style="text-align: center">{{ search | title }}</h2>
+
+    <div class="products-inner">
+
+        {% for post,scores in final_postings %}
+                    <div class="product-outer">
+                        <img alt="Flipkart Icon">
+
+                        <img src={{ post.1 }}>
+
+                        <a href={{ post.2 }}>{{ post.0 }}</a>
+
+                        <div class="products-pr-outer">
+                            <div class="price">
+                                <div class="price-currency">
+
+                                </div>
+                                <div class="price-right">
+                                    <p>{{ post.4 }}</p>
+                                    <p>{{ post.5 }}</p>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <div class="ratings-inner">
+                                    <p>Ratings: </p>
+                                    <div class="ratings-box">
+                                        <img alt="star">
+                                        <p>{{ post.3 }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{scores}} % positive reviews</p>
+                        <p>(1,645)</p>
+
+                        <div class="goto-outer">
+                            <a class="goto-text">Go to Page</a>
+                        </div>
+
+                    </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<img class="bg-image"  src="{% static 'Images/searchpage.png' %} " alt="main-img">
+
+</body>
+</html>
