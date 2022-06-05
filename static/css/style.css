@@ -251,6 +251,7 @@ display: inline-grid;
     text-align: center;
     border-radius: 25px;
     padding: 30px;
+    position: relative;
 }
 .flipkart{
     align-self: center;
@@ -258,9 +259,17 @@ display: inline-grid;
     margin: 0rem 1rem 1rem 1rem;
 }
 .product-img{
-width: 150px;
+    width: 150px;
     justify-self: center;
-    height: 200px;
+    height: 150px;
+}
+.number-of-reviews{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #848282;
+    margin-bottom: 10px;
+    margin-top: 3px;
 }
 .product-title{
     text-decoration: none;
@@ -334,12 +343,12 @@ font-style: normal;
     font-weight: 900;
     font-size: 16px;
     line-height: 17px;
-    margin-bottom: 1rem;
 }
 
 .scores{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .score-inner{
@@ -378,7 +387,37 @@ font-weight: 900;
     background-clip: text;
     text-fill-color: transparent;
 }
+.review-words{
+    display: flex;
+    padding: 6px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 240px;
+}
+.review-words-box{
+    padding: 8px 10px;
+}
+.positive{
+    background: linear-gradient(180deg, #FFFFFF 0%, #14FF00 100%);
+    border-radius: 5px;
+}
+.positive p{
+font-weight: 400;
+font-size: 12px;
+line-height: 10px;
+color: #000000;
+}
+.negative{
+background: linear-gradient(180deg, #000000 0%, #FF0000 100%);
+border-radius: 5px;
+}
 
+.negative p{
+font-weight: 400;
+font-size: 12px;
+line-height: 10px;
+color: white;
+}
 .goto-outer{
     border-radius: 20px;
     width: 117px;
@@ -394,5 +433,38 @@ font-weight: 900;
 text-decoration: none;
     font-weight: 600;
     color: #1C5B64;
+}
+
+.positive-product{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(97, 255, 0, 0.2) 100%), #FFFFFF;
+}
+.negative-product{
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 24.27%, rgba(255, 0, 0, 0.2) 100%), #FFFFFF;
+}
+.recommended{
+    background: linear-gradient(180deg, #FFFFFF 32.6%, #FFD700 100%);
+}
+.recommend-outer{
+    display: none;
+}
+.recommend-outer img{
+    width: 18px;
+    height: 18px;
+}
+.recommend-outer p{
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFD700;
+}
+.show{
+    display: flex;
+    position: absolute;
+    top: -31px;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
 }
 
